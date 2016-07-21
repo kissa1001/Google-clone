@@ -3,34 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Google</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 </head>
-<body>
-	<div class="header">
-		<div class="nav">
+<body ng-app="Google">
+	<header>
+		<nav>
 			<ul>
-				<li><a href="https://mail.google.com/">Gmail</a></li>
+				<li><a href="mailto:kissa101295@gmail.com?Subject=Google Job">Gmail</a></li>
 				<li><a href="https://www.google.com/imghp">Images</a></li>
-				<li><img src="images/apps.png" alt="app"/></li>
+				<li><img src="img/apps.png" alt="app"/></li>
 				<li><button href="https://accounts.google.com/serviceloginauth">Sign In</button></li>
 			</ul>
+		</nav>
+	</header>
+
+	<div class="animate-view-container">
+		<div ng-view class='view animate-view'></div>
+	</div>
+
+	<footer>
+	<div class="container">
+		<div class="row footer-elements">
+			<ul class="col-sm-6">
+				<li><a href="#">Advertising</a></li>
+				<li><a href="#">Business</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+			<div class="col-sm-6">
+				<ul class="nav-right">
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Settings</a></li>
+			</ul>
+			</div>
 		</div>
 	</div>
-	<div class="GoogleSearch">
-		<img src="images/Google-logo.png" alt="gglogo" width="270" height="87"/>
-		<input class="text"></input>
-		<br><button id="ggsearch" href="#">Google Search</button><button id="spin">I'm Feeling Lucky</button></br>
-	</div>
-	<div class="footer">
-		<ul id="left-side">
-			<li><a href="#">Advertising</a></li>
-			<li><a href="#">Business</a></li>
-			<li><a href="#">About</a></li>
-		</ul>
-		<ul id="right-side">
-			<li><a href="#">Privacy</a></li>
-			<li><a href="#">Terms</a></li>
-			<li><a href="#">Settings</a></li>
-		</ul>
-	</div>
+	</footer>
+</div>
+
+
+
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
